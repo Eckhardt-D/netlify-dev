@@ -39,7 +39,7 @@
           <a
             href="https://nuxtjs.org/"
             target="_blank"
-          >Nuxt Documentation</a>
+          >Nuxt Documentation test</a>
           <br>
           <a
             href="https://github.com/nuxt/nuxt.js"
@@ -68,6 +68,11 @@ export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  mounted() {
+    this.$axios.$get('http://localhost:34567/.netlify/functions/test-function')
+    .then(res => console.log(res))
+    .catch(e => console.error(e));
   }
 }
 </script>

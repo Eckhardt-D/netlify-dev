@@ -1,8 +1,10 @@
+// @ts-nocheck
+
 import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import pkg from './package'
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
 
   /*
   ** Headers of the page
@@ -56,7 +58,6 @@ export default {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
-
   /*
   ** Build configuration
   */
@@ -71,7 +72,6 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-    }
+    extend(config, ctx) {}
   }
 }
