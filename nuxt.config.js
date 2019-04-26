@@ -57,6 +57,9 @@ export default {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    proxy: {
+      '/.netlify/functions/*': process.env.NODE_ENV === 'development' ? 'http://localhost:8888' : ''
+    }
   },
   /*
   ** Build configuration

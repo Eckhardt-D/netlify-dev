@@ -70,7 +70,8 @@ export default {
     VuetifyLogo
   },
   mounted() {
-    this.$axios.$get('http://localhost:34567/.netlify/functions/test-function')
+    console.log(process.env)
+    this.$axios.$get('/.netlify/functions/test-function')
     .then(res => console.log(res))
     .catch(e => console.error(e));
   }
